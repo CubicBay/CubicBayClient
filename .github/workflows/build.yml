@@ -337,7 +337,7 @@ jobs:
           cd ${{ env.INSTALL_DIR }}
           chmod +x "CubicBayClient.app/Contents/MacOS/CubicBayClient"
           sudo codesign --sign - --deep --force --entitlements "../program_info/App.entitlements" --options runtime "CubicBayClient.app/Contents/MacOS/CubicBayClient"
-          mv "CubicBayClient.app" "Cubic Bay Client.app"
+          mv "CubicBayClient.app" "CubicBay Client.app"
           tar -czf ../CubicBayClient.tar.gz *
 
       - name: Make Sparkle signature (macOS)
@@ -532,7 +532,7 @@ jobs:
         if: inputs.build_type == 'Debug'
         uses: actions/upload-artifact@v3
         with:
-          name: CubicBayClient_${{ env.VERSION }}_amd64.snap
+          name: prismlauncher_${{ env.VERSION }}_amd64.snap
           path: ${{ steps.snapcraft.outputs.snap }}
 
   flatpak:
@@ -550,7 +550,7 @@ jobs:
         if: inputs.build_type == 'Debug'
         uses: flatpak/flatpak-github-actions/flatpak-builder@v5
         with:
-          bundle: "Cubic Bay Client.flatpak"
+          bundle: "CubicBay Client.flatpak"
           manifest-path: flatpak/org.prismlauncher.PrismLauncher.yml 
 
   nix:

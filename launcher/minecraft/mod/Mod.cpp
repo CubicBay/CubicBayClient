@@ -201,7 +201,7 @@ void Mod::finishResolvingWithDetails(ModDetails&& details)
     m_local_details = std::move(details);
     if (metadata)
         setMetadata(std::move(metadata));
-};
+}
 
 auto Mod::provider() const -> std::optional<QString>
 {
