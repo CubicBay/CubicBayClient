@@ -558,8 +558,8 @@ jobs:
     strategy:
       matrix:
         package:
-          - cubicbayclient
-          - cubicbayclient-qt5
+          - prismlauncher
+          - prismlauncher-qt5
     steps:
       - name: Clone repository
         if: inputs.build_type == 'Debug'
@@ -577,7 +577,7 @@ jobs:
       - uses: cachix/cachix-action@v12
         if: inputs.build_type == 'Debug'
         with:
-          name: cubicbayclient
+          name: prismlauncher
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - name: Build
         if: inputs.build_type == 'Debug'
