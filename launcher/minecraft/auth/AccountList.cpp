@@ -33,6 +33,7 @@
  *      limitations under the License.
  */
 
+#include "Application.h"
 #include "AccountList.h"
 #include "AccountData.h"
 #include "AccountTask.h"
@@ -663,7 +664,15 @@ bool AccountList::anyAccountIsValid()
             return true;
         }
     }
-    return false;
+    if (APPLICATION->settings()->get("TheCat").toBool())
+    {
+        return true
+    } else
+    {
+        return false;
+    }
+    
+    
 }
 
 void AccountList::fillQueue() {
