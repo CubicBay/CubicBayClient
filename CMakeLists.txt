@@ -186,9 +186,9 @@ set(Launcher_QT_VERSION_MAJOR "5" CACHE STRING "Major Qt version to build agains
 # By using this key in your builds you accept the terms of use laid down in
 # https://docs.microsoft.com/en-us/legal/microsoft-identity-platform/terms-of-use
 
-## Launcher_MSA_CLIENT_ID do SoberanaCraft SpectrumLauncher https://github.com/SoberanaCraft/SpectrumLauncher
+set(Launcher_MSA_CLIENT_ID "8bc6f785-df27-4abb-9ffc-83106a29a8d3" CACHE STRING "Client ID you can get from Microsoft Identity Platform when you register an application")
 
-set(Launcher_MSA_CLIENT_ID "05fb2a3e-0733-4616-bd8a-3d9878074326" CACHE STRING "Client ID you can get from Microsoft Identity Platform when you register an application")
+## For newbies like me: You can get a MSA_CLIENT_ID following some parts of this tutorial https://www.appypie.com/faqs/how-can-i-get-my-microsoft-acount-client-id-and-client-secret-key
 
 # By using this key in your builds you accept the terms and conditions laid down in
 # https://support.curseforge.com/en/support/solutions/articles/9000207405-curse-forge-3rd-party-api-terms-and-conditions
