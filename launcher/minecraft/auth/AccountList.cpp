@@ -666,7 +666,7 @@ bool AccountList::anyAccountIsValid()
     }
     if (APPLICATION->settings()->get("TheCat").toBool())
     {
-        return true
+        return true;
     } else
     {
         return false;
